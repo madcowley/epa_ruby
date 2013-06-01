@@ -10,5 +10,8 @@ module EPA
     include EPA::Client::Request
     #include EPA::Client::RadInfo
 
+    def initialize(options={})
+      @options = options
+    end
   end
 end
