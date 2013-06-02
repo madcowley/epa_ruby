@@ -32,6 +32,13 @@ Usage Examples
 		# List all the tables in the PCS database
 	  EPA::Client::Pcs.new.catalog()
 
+    # Get UV Index data for a zipcode
+    uvi = EPA::Client::UvIndex.daily_for(:zip => 33609)
+    puts uvi.uv_alert
+    puts uvi.uv_index
+    
+    EPA::Client::UvIndex.hourly_for(:zip => 33609)
+
 
 Contributing
 ------------
